@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar Eletrônico</title>
+    <style>
+        body {
+            background-color: black;
+            color:white;
+            font: normal 16pt times;
+        }
+        h1 {
+            background-color: white;
+            color:black;
+        }
+        ::selection {
+            background-color: crimson;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>RADAR ELETRÔNICO</h1>
+    <script>
+        var vel = Number(prompt('Por favor, digite sua velocidade (km/h)'))
+
+        var limite = 80
+        var valorBase = 53.87
+
+        var velPorc = vel/limite * 100 - 100 // porcentagem de excesso de vel.
+
+        var multa = valorBase * (velPorc<=20?1: (velPorc<=30?2: 5))
+        // 20% - valorBase
+        // 30% - valorBase*2
+        // 40% ou maior - valorBase*5
+
+        var fraseNormal = `<p>Você está dentro do limite de velocidade\
+(${limite} km/h).</p>`
+
+        var fraseMulta = `<p>Você dirigiu ${vel-limite} km/h acima do limite de \
+velocidade (${limite} km/h), <br/>portanto, excedendo este valor \
+em ${velPorc.toFixed(0)}%. </p><br/> <p>Multa de \
+${multa.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}. </p>`
+
+        document.write(vel<=limite?fraseNormal:fraseMulta)
+        document.write('Seja prudente!')
+    </script>
+</body>
+</html>
