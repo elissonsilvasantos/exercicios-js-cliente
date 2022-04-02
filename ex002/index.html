@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Juros Compostos</title>
+    <style>
+        body{
+            background-color:navy;
+            color:orange;
+            font:normal 24pt times;
+        }
+        ::selection {
+            /*background-color:orangered;*/
+            color:aquamarine;
+        }
+        h1 {
+            font: bolder 32pt times;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Cálculo de Juros Compostos
+    </h1>
+    <script>
+
+        var capital = Number(window.prompt('Digite o valor do capital').replace(',', '.')) // lendo valor do capital
+
+        var taxaPorc = Number(window.prompt('Digite a taxa de juros').replace(',', '.')) // lendo a taxa de juros na forma x%
+
+        var meses = Number(window.prompt('Digite a quantidade de meses da aplicação').replace(',', '.')) // lendo a quantidade de meses como n real
+        meses -= (meses % 1) // transformando meses em inteiro
+        
+        var taxa = taxaPorc / 100 // adaptando taxa de juros para forma dividida
+
+        var juros = capital * (taxa+1)**meses // cálculo do juros
+        var montante = capital + juros // cálculo do montante
+        
+        /* adaptando valores para serem mostrados */
+        capForm = capital.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) 
+        juForm = juros.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        montForm = montante.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
+        /* mostrando os valores calculados */
+        document.write(`O capital de ${capForm} aplicado à 
+        taxa de <i>${taxaPorc}% ao mês</i>, <br/>durante ${meses} meses, gerou 
+        <strong>${juForm}</strong> de juros, <br/>totalizando 
+        um montante de ${montForm}.<br/>`)
+
+    </script>
+</body>
+</html>
