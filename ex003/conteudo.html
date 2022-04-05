@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Zoológico: Visita Virtual </title>
+    <link rel="stylesheet" href="apresentacao.css">
+</head>
+<body>
+    <header> Zoológico </header>
+    <section>
+        <div id='entrada'> 
+            <p>
+                escolha um animal para visitar: 
+            </p>
+            <p>
+                <input type="radio" name="radbicho" id="macaco" checked>
+                <label for="macaco"> macaco </label>
+
+                <input type="radio" name="radbicho" id="onca">
+                <label for="onca"> onça </label>
+
+                <input type="radio" name="radbicho" id="zebra">
+                <label for="zebra"> zebra </label>
+
+                <input type="radio" name="radbicho" id="pavao">
+                <label for="pavao"> pavão </label>
+
+                <input type="radio" name="radbicho" id="elefante">
+                <label for="elefante"> elefante </label>
+            </p>
+            <p>
+                <input type="button" value="procurar" onclick='procurar()'>
+            </p>
+        </div>
+        <div id='saida'> Preencha os dados acima. </div>
+    </section>
+    <footer> Livre de direitos autorais </footer>
+
+    <script src="comportamento.js"></script>
+</body>
+</html>
