@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(33, 107, 218);
+    color: white;
+    text-align: center;
+}
+
+header {
+    font: bold 42pt arial;
+}
+
+section{
+    background-color: white;
+    margin: auto;
+    width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.37);
+    font: normal 16pt tahoma;
+
+    color: black;
+}
+
+input#txtnum {
+    width: 50px;
+    font: normal 14pt monospace;
+    text-align: center;
+}
+
+input#btncalc {
+    font: normal 13pt tahoma;
+}
+
+footer {
+    font: italic 14pt tahoma;
+}
