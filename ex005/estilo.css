@@ -1,0 +1,89 @@
+body {
+    background-color: red;
+    font: normal 14pt arial;
+}
+
+::selection {
+    color:coral;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    width: 300px;
+    margin: auto;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.295);
+}
+
+/* barra superior */
+div#modo {
+    text-align: center;
+    padding: 10px;
+    font: normal 12pt arial;
+}
+input#barra {
+    width: 50px;
+    height: 10px;
+}
+
+/* div formulário geral */
+div#formulario {
+    line-height: 40px;
+}
+
+/* div resultado geral */
+div#resultado {
+    font: normal 12pt arial;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* para todos campos editáveis do documento */
+input.campo {
+    font: normal 14pt arial;
+    color: gray;
+}
+
+/* para todos botões do documento */
+input.btn {
+    font: normal 14pt arial;
+}
+
+/* elemento auxiliar para agregar os botões */
+div#aux {
+    text-align: center;
+}
+
+
+/* elementos do formulário cadastro */
+input#txtnome {
+    width: 250px;
+}
+input#txtcpf {
+    width: 135px;
+}
+input#txttel {
+    width: 150px;
+}
+
+
+/* elementos do resuldado consulta */
+select#registro {
+    font: normal 12pt arial;
+    padding: 5px;
+    overflow: hidden;
+}
+
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
